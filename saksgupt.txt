@@ -1,0 +1,13 @@
+Use of git commands
+1) git clone - It clones a remote repository into a local
+directory
+2) git add - It is used for adding content in staging area.
+3) git commit - It records the staing area contents  as single change.
+4) git push - It updates the remote repository with local changes 
+5) git pull - It updated the local reporsitory from remote repository
+
+if multiple users shares one repository then remote copy of it will be 
+one where as local repository will be one per user.And synchronization 
+of changes made in local repository should be pushed to remote directory 
+and other users should pull so that every user has same base code.
+
