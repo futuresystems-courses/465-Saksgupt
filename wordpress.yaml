@@ -1,35 +1,20 @@
 heat_template_version: 2013-05-23
 
-description: >
-  Heat WordPress template on Fedora 21, using only Heat OpenStack-native
-  resource types (adapted from  HOT examples), and without the requirement for
-  heat-cfntools in the image.  WordPress is web software you can use to create
-  a beautiful website or blog.
-  This template installs a single-instance WordPress deployment using a local
-  MySQL database to store the data.
+description: Heat Exercise 2
 
 parameters:
-
   key_name:
     type: string
-    description : Name of a KeyPair to enable SSH access to the instance
+    label: key name
     default: saksgupt-india-key
- instance_type:
-    type: string
-    description: Instance type for WordPress server
-    default: m1.small
-    constraints:
-      - allowed_values: [m1.small, m1.medium, m1.large]
-        description: instance_type must be one of m1.small, m1.medium or m1.large
   image_id:
     type: string
-    description: >
-      Name or ID of the image to use for the WordPress server.
-      Recommended values are fedora-20.i386 or fedora-20.x86_64;
-      get them from http://cloud.fedoraproject.org/fedora-20.i386.qcow2
-      or http://cloud.fedoraproject.org/fedora-20.x86_64.qcow2.
-      Futuresystems has fedora-21.
-    default: futuresystems/fedora-21
+    label: Image name
+    default: futuresystems/ubuntu-14.04
+  instance_type:
+    type: string
+    label: Instance flavor
+    default: m1.small
 
   db_name:
     type: string
